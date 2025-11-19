@@ -3,7 +3,8 @@ import dj_database_url
 
 DEBUG = True  # For local development. Set to False on production (Render)!
 SECRET_KEY = 'django-insecure-4f2sdfu23r90p09sd1f3sdgjsd9sdfgjsdfgjsdfg'
-ALLOWED_HOSTS = []  # For production, set to your Render domain
+# Will use "livestock-m69e.onrender.com" from your Render environment variable!
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get('ALLOWED_HOSTS') else []
 ROOT_URLCONF = 'core.urls'
 
 INSTALLED_APPS = [
@@ -42,7 +43,6 @@ TEMPLATES = [
     },
 ]
 
-# Auto-detect DATABASE_URL for cloud, else fallback to Neon local info
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL', 'postgres://neondb_owner:npg_ciLjUxoAl4v5@ep-ancient-cloud-a4hcrczz-pooler.us-east-1.aws.neon.tech:5432/neondb')
@@ -50,6 +50,4 @@ DATABASES = {
 }
 
 STATIC_URL = '/static/'
-
-# For Render/production
 STATIC_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../staticfiles')
