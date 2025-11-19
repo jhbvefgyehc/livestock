@@ -8,14 +8,18 @@ def get_stock_price(symbol):
     params = {
         'function': 'GLOBAL_QUOTE',
         'symbol': symbol,
-        'apikey': 'SZSRMMUNODCLYRUO'  # Use your actual Alpha Vantage API key
+        'apikey': 'SZSRMMUNODCLYRUO'  # Replace with your active key!
     }
     data = requests.get(url, params=params).json()
-    try:
-        price = data['Global Quote']['05. price']
-    except Exception:
-        price = "N/A"
-    return price
+    # Show the raw response for debugging
+    if "Global Quote" in data and "05. price" in data["Global Quote"]:
+        return data["Global Quote"]["05. price"]
+    elif "Note" in data:
+        return f"API rate limit hit: {data['Note']}"
+    elif "Error Message" in data:
+        return f"API error: {data['Error Message']}"
+    else:
+        return f"N/A (Raw: {str(data)})"
 
 def stock_price_view(request):
     symbol = request.GET.get('symbol', 'TATASTEEL.BSE')
