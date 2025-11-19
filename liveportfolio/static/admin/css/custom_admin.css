@@ -1,0 +1,399 @@
+/* ========================================
+   PROFESSIONAL ADMIN STYLING
+   ======================================== */
+
+/* Header Styling */
+#header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#branding h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#user-tools {
+    color: white;
+    padding: 10px 0;
+}
+
+#user-tools a {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+#user-tools a:hover {
+    border-bottom-color: white;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    background: #f3f4f6;
+    padding: 15px 40px;
+    border-bottom: 2px solid #e5e7eb;
+    font-size: 14px;
+}
+
+/* Main Content Area */
+#content {
+    padding: 30px 40px;
+    background: #f9fafb;
+    min-height: calc(100vh - 200px);
+}
+
+/* Module Styling - Dashboard Cards */
+.module {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.module:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.module h2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.module caption {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Table Styling */
+#result_list {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0;
+}
+
+#result_list thead th {
+    background: #f3f4f6;
+    color: #1f2937;
+    font-weight: 600;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid #e5e7eb;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#result_list tbody tr {
+    background: white;
+    transition: background-color 0.2s;
+}
+
+#result_list tbody tr:hover {
+    background: #f9fafb;
+}
+
+#result_list tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+#result_list tbody tr:nth-child(even):hover {
+    background: #f3f4f6;
+}
+
+#result_list tbody td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Action Row Styling */
+#result_list tbody tr.selected {
+    background: #dbeafe !important;
+}
+
+/* Links in tables */
+#result_list tbody th a,
+#result_list tbody td a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#result_list tbody th a:hover,
+#result_list tbody td a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Action Buttons */
+.button, input[type=submit], input[type=button], .submit-row input, button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover, .submit-row input:hover, button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Delete Button */
+.deletelink {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+}
+
+.deletelink:hover {
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Form Styling */
+.form-row {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-row:last-child {
+    border-bottom: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"], 
+input[type="number"], input[type="date"], textarea, select {
+    padding: 10px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 500px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, 
+input[type="email"]:focus, input[type="number"]:focus,
+input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+/* Filters Sidebar */
+#changelist-filter {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#changelist-filter h2 {
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+#changelist-filter h3 {
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 10px 0;
+}
+
+#changelist-filter a {
+    color: #2563eb;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+#changelist-filter a:hover {
+    background: #f3f4f6;
+}
+
+#changelist-filter li.selected a {
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+/* Search Bar */
+#changelist-search {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#searchbar {
+    padding: 12px 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 300px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#searchbar:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+/* Pagination */
+.paginator {
+    padding: 20px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.paginator a, .paginator span {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.paginator a:hover {
+    background: #dbeafe;
+}
+
+.paginator .this-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+}
+
+/* Dashboard - Recent Actions */
+#recent-actions-module {
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#recent-actions-module h2 {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    border-radius: 12px 12px 0 0;
+}
+
+#recent-actions-module ul {
+    padding: 0;
+    margin: 0;
+}
+
+#recent-actions-module li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#recent-actions-module li:last-child {
+    border-bottom: none;
+}
+
+/* Dashboard Links */
+.app-liveportfolio .addlink {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-liveportfolio .addlink:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.app-liveportfolio .changelink {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-liveportfolio .changelink:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Error Messages */
+.errornote {
+    background: #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: #991b1b;
+    margin: 20px 0;
+}
+
+/* Success Messages */
+.success {
+    background: #f0fdf4;
+    border-left: 4px solid #10b981;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: #065f46;
+    margin: 20px 0;
+}
+
+/* Login Page */
+.login #content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login .form-row {
+    border: none;
+}
+
+.login input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}

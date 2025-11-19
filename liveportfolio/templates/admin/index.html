@@ -1,0 +1,23 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+<!-- Dashboard Button Card -->
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; margin-bottom: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+    <h2 style="color: white; margin-bottom: 15px; font-size: 28px; font-weight: 600;">📈 Stock Portfolio Dashboard</h2>
+    <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px; font-size: 16px;">View your portfolio with live stock prices and analytics</p>
+    <a href="/dashboard/" target="_blank" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 18px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+        🚀 View Live Dashboard
+    </a>
+</div>
+
+<!-- Original admin content below -->
+{{ block.super }}
+
+<style>
+    a[href="/dashboard/"]:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        background: #f8f9fa !important;
+    }
+</style>
+{% endblock %}

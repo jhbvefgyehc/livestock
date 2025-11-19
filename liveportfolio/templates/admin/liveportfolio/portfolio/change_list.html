@@ -1,0 +1,37 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+
+{% block content_title %}
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1>{{ title }}</h1>
+        <a href="{{ dashboard_url }}" target="_blank" 
+           style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); 
+                  color: white; 
+                  padding: 12px 24px; 
+                  border-radius: 8px; 
+                  text-decoration: none; 
+                  font-weight: 600; 
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+                  transition: all 0.3s;
+                  font-size: 14px;">
+            <span style="font-size: 18px;">📈</span>
+            View Live Dashboard
+        </a>
+    </div>
+    <p style="color: #6b7280; font-size: 14px; margin-top: -10px; margin-bottom: 20px;">
+        Manage your portfolio stocks here. Click the dashboard button to see live prices.
+    </p>
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<style>
+    a[href*="dashboard"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4) !important;
+    }
+</style>
+{% endblock %}
