@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Symbol</th><th>Quantity</th><th>Buy Price</th><th>Buy Date</th><th>Live Price</th>
+  </tr>
+  {% for h in dashboard %}
+  <tr>
+    <td>{{ h.symbol }}</td>
+    <td>{{ h.quantity }}</td>
+    <td>{{ h.buy_price }}</td>
+    <td>{{ h.buy_date }}</td>
+    <td>{{ h.live_price }}</td>
+  </tr>
+  {% endfor %}
+</table>
