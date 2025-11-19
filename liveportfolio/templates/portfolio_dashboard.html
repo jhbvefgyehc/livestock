@@ -1,14 +1,49 @@
-<table>
-  <tr>
-    <th>Symbol</th><th>Quantity</th><th>Buy Price</th><th>Buy Date</th><th>Live Price</th>
-  </tr>
-  {% for h in dashboard %}
-  <tr>
-    <td>{{ h.symbol }}</td>
-    <td>{{ h.quantity }}</td>
-    <td>{{ h.buy_price }}</td>
-    <td>{{ h.buy_date }}</td>
-    <td>{{ h.live_price }}</td>
-  </tr>
-  {% endfor %}
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f3f6fa; }
+        h1 { color: #31518C; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(49,81,140,0.07);
+        }
+        th, td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid #ebebeb;
+        }
+        th { background: #31518C; color: #fff; }
+        tr:hover { background: #f6f8fc; }
+        .price { font-weight: bold; color: #2d945b; }
+        .symbol { color: #3251bc; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Stock Portfolio Dashboard</h1>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Quantity</th>
+            <th>Buy Price</th>
+            <th>Buy Date</th>
+            <th>Live Price</th>
+        </tr>
+        {% for row in dashboard %}
+        <tr>
+            <td class="symbol">{{ row.symbol }}</td>
+            <td>{{ row.quantity }}</td>
+            <td>₹{{ row.buy_price }}</td>
+            <td>{{ row.buy_date }}</td>
+            <td class="price">₹{{ row.live_price }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5">No stocks in your portfolio yet!</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
