@@ -8,7 +8,8 @@ def get_stock_price(symbol):
     params = {
         'function': 'GLOBAL_QUOTE',
         'symbol': symbol,
-        'apikey': 'SZSRMMUNODCLYRUO'  # Replace with your active key!
+        'apikey': 'YNIYNAOKVV3MKKRY'  # <--- your new key!
+
     }
     data = requests.get(url, params=params).json()
     # Show the raw response for debugging
